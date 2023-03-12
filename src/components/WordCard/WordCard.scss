@@ -1,6 +1,39 @@
 .slider {
     display: flex;
     flex-direction: row;
+    align-items: center;
+
+}
+
+.slider__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.sliderPrev {
+    background: url('./prev.png')0 0 /100% no-repeat;
+    margin-left: 33%;
+
+    &:hover {
+        background: url('./prevHover.png')0 0 /100% no-repeat;
+    }
+}
+
+.sliderNext {
+    background: url('./next.png')0 0 /100% no-repeat;
+    margin-right: 33%;
+
+    &:hover {
+        background: url('./nextHover.png')0 0 /100% no-repeat;
+    }
 }
 
 .card-box {
@@ -9,10 +42,10 @@
     padding: 2%;
     width: 15%;
     height: 14em;
-    //background-color: #eebb5d;
     background-color: #AF2896;
     font-weight: 600;
     text-transform: uppercase;
+
 
     h2 {
         color: #d8d8d8;
@@ -20,6 +53,7 @@
     }
 
     button {
+        cursor: pointer;
         margin: 2em auto;
         padding: 1em;
         color: #f3f3f3;
@@ -29,13 +63,16 @@
         text-transform: lowercase;
         border: 2px solid #eebb5d;
         cursor: pointer;
+
+        &:hover {
+            box-shadow: -2px 4px 23px -3px rgba(34, 60, 80, 0.2);
+        }
     }
 
     .card-box__btn {
         background-color: #eebb5d;
         width: 70%;
         transition: background-color 0.3s linear;
-
     }
 
 }

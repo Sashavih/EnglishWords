@@ -9,15 +9,15 @@ function WordCard(props) {
     }
     return (
         <div className="slider">
-            <button type="button"></button>
+            <button type="button" className="sliderPrev slider__btn"></button>
             <div className="card-box">
                 <h2>{props.name}</h2>
                 <div className="card-box__text">
-                    <p className="card-box__transcription">[{props.transcription}]</p>
+                    <p className="card-box__transcription">[ {props.transcription} ]</p>
                     {pressed ? <button onClick={handleChange} className="card-box__translate">{props.translate}</button> : <button onClick={handleChange} type="button" className="card-box__btn">проверить</button>}
                 </div>
             </div>
-            <button type="button"></button>
+            <button type="button" className="sliderNext slider__btn"></button>
         </div>
     )
 }
