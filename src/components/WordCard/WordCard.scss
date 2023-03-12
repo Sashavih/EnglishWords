@@ -63,9 +63,10 @@
         text-transform: lowercase;
         border: 2px solid #eebb5d;
         cursor: pointer;
+        box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.1);
 
         &:hover {
-            box-shadow: -2px 4px 23px -3px rgba(34, 60, 80, 0.2);
+            box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.15);
         }
     }
 
