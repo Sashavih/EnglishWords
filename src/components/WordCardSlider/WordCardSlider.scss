@@ -1,3 +1,41 @@
+.slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.slider__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.sliderPrev {
+    background: url('./prev.png')0 0 /100% no-repeat;
+    margin-left: 33%;
+
+    &:hover {
+        background: url('./prevHover.png')0 0 /100% no-repeat;
+    }
+}
+
+.sliderNext {
+    background: url('./next.png')0 0 /100% no-repeat;
+    margin-right: 33%;
+
+    &:hover {
+        background: url('./nextHover.png')0 0 /100% no-repeat;
+    }
+}
+
 .card-box {
     margin: 2em auto;
     border-radius: 3px;

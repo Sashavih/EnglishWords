@@ -3,19 +3,14 @@ import './components/variables.scss';
 import words from './utils/words';
 import cards from './utils/cards';
 import Header from './components/Header/Header';
-import WordCard from './components/WordCard/WordCard';
 import WordsList from './components/WordsList/WordsList';
+import WordCardSlider from './components/WordCardSlider/WordCardSlider';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {
-        cards.map((card) =>
-          <WordCard key={card.id} {...card} />
-        )
-      }
-
+      <WordCardSlider cards={cards} />
       {
         words.map((word) =>
           <WordsList key={word.id} {...word} />

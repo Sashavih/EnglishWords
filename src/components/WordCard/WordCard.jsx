@@ -1,24 +1,21 @@
 import { useState } from "react";
 import './WordCard.scss';
 
-function WordCard(props) {
-    console.log(props);
+function WordCard({ card }) {
     const [pressed, setPressed] = useState(false);
     const handleChange = () => {
         setPressed(!pressed);
     }
     return (
-        <div className="slider">
-            <button type="button" className="sliderPrev slider__btn"></button>
-            <div className="card-box">
-                <h2>{props.name}</h2>
-                <div className="card-box__text">
-                    <p className="card-box__transcription">[ {props.transcription} ]</p>
-                    {pressed ? <button onClick={handleChange} className="card-box__translate">{props.translate}</button> : <button onClick={handleChange} type="button" className="card-box__btn">проверить</button>}
-                </div>
+
+        <div className="card-box">
+            <h2>{card.name}</h2>
+            <div className="card-box__text">
+                <p className="card-box__transcription">[ {card.transcription} ]</p>
+                {pressed ? <button onClick={handleChange} className="card-box__translate">{card.translate}</button> : <button onClick={handleChange} type="button" className="card-box__btn">проверить</button>}
             </div>
-            <button type="button" className="sliderNext slider__btn"></button>
         </div>
+
     )
 }
 export default WordCard;
