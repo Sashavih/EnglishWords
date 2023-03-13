@@ -1,7 +1,7 @@
 ### ENGLISH WORDS
 Application for learning English
 
-<img src="https://github.com/Sashavih/EnglishWords/blob/main/src/components/WordsList/el.png" width="800"/>
+<img src="https://github.com/Sashavih/EnglishWords/blob/main/src/components/WordsList/en.png" width="700"/>
 
 ### Technologies:
 <div>
