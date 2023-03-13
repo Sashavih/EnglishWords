@@ -1,4 +1,4 @@
-https://github.com/Sashavih/EnglishWords/blob/main/src/components/WordCard/words.png
+![Иллюстрация к проекту](https://github.com/Sashavih/EnglishWords/blob/main/src/components/WordCard/words.png)
 
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
