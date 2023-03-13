@@ -5,6 +5,7 @@ import cards from './utils/cards';
 import Header from './components/Header/Header';
 import WordsList from './components/WordsList/WordsList';
 import WordCardSlider from './components/WordCardSlider/WordCardSlider';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <WordsList key={word.id} {...word} />
         )
       }
-
+      <Footer />
     </div>
   );
 }

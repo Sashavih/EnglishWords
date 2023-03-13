@@ -19,7 +19,7 @@
 }
 
 nav {
-    margin-left: 48%;
+    margin-left: 57%;
 
 
 }
@@ -28,18 +28,19 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    width: 20em;
-    justify-content: space-around;
+    width: 9em;
+    justify-content: space-between;
     justify-self: flex-end;
     list-style-type: none;
 
     a {
+        font-weight: 700;
         color: rgb(206, 206, 206);
         text-transform: uppercase;
         text-decoration: none;
 
         &:hover {
-            color: #7358FF;
+            color: #a7a7a7;
 
         }
     }

@@ -1,9 +1,9 @@
 .card-box {
     margin: 2em auto;
     border-radius: 3px;
-    padding: 2%;
+    padding: 3%;
     width: 15%;
-    height: 14em;
+    height: 16em;
     background-color: #AF2896;
     font-weight: 600;
     text-transform: uppercase;
@@ -16,16 +16,17 @@
 
     button {
         cursor: pointer;
-        margin: 2em auto;
+        margin: 2.5em auto;
         padding: 1em;
         color: #f3f3f3;
-        border-radius: 3px;
+        border-radius: 5px;
         font-size: 17px;
         font-weight: 600;
         text-transform: lowercase;
-        border: 2px solid #eebb5d;
+        border: 2px solid #7358FF;
         cursor: pointer;
         box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.1);
+        font-family: inherit;
 
         &:hover {
             box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.15);
@@ -33,7 +34,8 @@
     }
 
     .card-box__btn {
-        background-color: #eebb5d;
+        background-color: #7358FF;
+        ;
         width: 70%;
         transition: background-color 0.3s linear;
     }
@@ -56,7 +58,7 @@
 .card-box__transcription {
     color: #e3b4da;
     padding: 1%;
-    font-size: smaller;
+    font-size: 15px;
     font-weight: 500;
 
 }

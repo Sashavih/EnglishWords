@@ -4,19 +4,17 @@ $blue: #7358FF;
 $lightBlue: #7358FF;
 $orange: #F47C75;
 $pink: #AF2896;
-$red: #EB1E32;
-$green: #148A08;
-$lightGreen: #27856A;
+$lightGreen: #2b9476;
 $sun: #F7BC49;
 $blackBackground: #070707;
 $grayBackground: #121212;
 
 .table {
     display: grid;
-    width: 70%;
+    width: 67%;
     height: 3.5em;
     margin: auto;
-    grid-template-columns: 3% 1fr 1fr 1fr 18%;
+    grid-template-columns: 1fr 1fr 1fr 15%;
     color: #d8d8d8;
 
     input {
@@ -26,10 +24,8 @@ $grayBackground: #121212;
         border-radius: 3px;
         outline: none;
         padding: 0.5em;
-        width: 60%;
+        width: 63%;
         height: 2em;
-
-
     }
 
     div {
@@ -41,7 +37,6 @@ $grayBackground: #121212;
     }
 
 }
-
 
 .blueClick {
     background-color: #947fff;
@@ -56,14 +51,8 @@ $grayBackground: #121212;
     background-color: #42aa8c;
 }
 
-.btnSmall {
-    width: 30px;
-    height: 32px;
-}
-
 .btnBig {
     width: 40px;
-    height: 32px;
 }
 
 .btnBox {
@@ -75,30 +64,36 @@ $grayBackground: #121212;
 
     .btnSave {
         background: url('./check.png')0 0 /100% no-repeat;
-        width: 3.1em;
+        width: 36px;
+        height: 28px;
     }
 
     .btnEdit {
-        width: 2.5em;
+        width: 28px;
+        height: 28px;
         background: url('./pencil.png')0 0 /100% no-repeat;
     }
 
     .btnDelete {
-        width: 2.5em;
+        width: 28px;
+        height: 28px;
         background: url('./delete.png')0 0 /100% no-repeat;
+
     }
 
     .btnClear {
-        width: 2.5em;
+        width: 28px;
+        height: 28px;
         background: url('./Component3.png')0 0 /100% no-repeat;
     }
 
 
     button {
-        border: none;
         border-radius: 8%;
-        margin: 5px;
+        border: none;
+        margin: 7px;
         transition: 0.3s;
+        box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.1);
 
         &:hover {
             transform: scale(1.09);
@@ -110,13 +105,10 @@ $grayBackground: #121212;
     background-color: $purple;
 }
 
-.lightPurple {
-    background-color: $lightPurple;
+.pink {
+    background-color: $pink;
 }
 
-.green {
-    background-color: $green;
-}
 
 .lightGreen {
     background-color: $lightGreen;
@@ -124,10 +116,6 @@ $grayBackground: #121212;
 
 .lightBlue {
     background-color: $lightBlue;
-}
-
-.blue {
-    background-color: $blue;
 }
 
 .pink {
@@ -142,11 +130,11 @@ $grayBackground: #121212;
     background-color: $sun;
 }
 
-.fade {
-    background-color: #212121;
-    ;
-}
 
 .boldFont {
     font-weight: 700;
+}
+
+.darkColor {
+    opacity: 92%;
 }
