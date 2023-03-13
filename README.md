@@ -1,7 +1,7 @@
 ### ENGLISH WORDS
 Application for learning English
 
-![илюстрация к проекту](https://github.com/Sashavih/EnglishWords/blob/main/src/components/WordCard/words.png)
+<img src="https://github.com/Sashavih/EnglishWords/blob/main/src/components/WordsList/el.png" width="800"/>
 
 ### Technologies:
 <div>
