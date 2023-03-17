@@ -63,7 +63,7 @@ $grayBackground: #121212;
     background-color: $purple;
 
     .btnSave {
-        background: url('./check.png')0 0 /100% no-repeat;
+        background: url('../../static/check.png')0 0 /100% no-repeat;
         width: 36px;
         height: 28px;
     }
@@ -71,20 +71,20 @@ $grayBackground: #121212;
     .btnEdit {
         width: 28px;
         height: 28px;
-        background: url('./pencil.png')0 0 /100% no-repeat;
+        background: url('../../static/pencil.png')0 0 /100% no-repeat;
     }
 
     .btnDelete {
         width: 28px;
         height: 28px;
-        background: url('./delete.png')0 0 /100% no-repeat;
+        background: url('../../static/delete.png')0 0 /100% no-repeat;
 
     }
 
     .btnClear {
         width: 28px;
         height: 28px;
-        background: url('./Component3.png')0 0 /100% no-repeat;
+        background: url('../../static/Component3.png')0 0 /100% no-repeat;
     }
 
 
@@ -94,6 +94,7 @@ $grayBackground: #121212;
         margin: 7px;
         transition: 0.3s;
         box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
 
         &:hover {
             transform: scale(1.09);

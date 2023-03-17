@@ -20,19 +20,19 @@
 }
 
 .sliderPrev {
-    background: url('./prev.png')0 0 /100% no-repeat;
+    background: url('../../static/prev.png')0 0 /100% no-repeat;
     margin-left: 33%;
 
     &:hover {
-        background: url('./prevHover.png')0 0 /100% no-repeat;
+        background: url('../../static/prevHover.png')0 0 /100% no-repeat;
     }
 }
 
 .sliderNext {
-    background: url('./next.png')0 0 /100% no-repeat;
+    background: url('../../static/next.png')0 0 /100% no-repeat;
     margin-right: 33%;
 
     &:hover {
-        background: url('./nextHover.png')0 0 /100% no-repeat;
+        background: url('../../static/nextHover.png')0 0 /100% no-repeat;
     }
 }
