@@ -1,5 +1,5 @@
 import './Header.scss';
-import logo from "./grid.png"
+import logo from "../../static/grid.png"
 
 function Header() {
     return (
