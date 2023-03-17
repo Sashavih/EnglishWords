@@ -15,7 +15,6 @@ function WordCard({ card }) {
                 {pressed ? <button onClick={handleChange} className="card-box__translate">{card.translate}</button> : <button onClick={handleChange} type="button" className="card-box__btn">проверить</button>}
             </div>
         </div>
-
     )
 }
 export default WordCard;
