@@ -8,7 +8,7 @@ import WordCardSlider from './components/WordCardSlider/WordCardSlider';
 import Footer from './components/Footer/Footer';
 import NotFoundPade from './components/NotFoundPage/NotFoundPage';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
