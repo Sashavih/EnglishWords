@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/EnglishWords/static/css/main.944dc421.css",
-    "main.js": "/EnglishWords/static/js/main.7101b051.js",
+    "main.js": "/EnglishWords/static/js/main.0f0001a2.js",
     "static/js/787.82e29686.chunk.js": "/EnglishWords/static/js/787.82e29686.chunk.js",
     "index.html": "/EnglishWords/index.html",
     "main.944dc421.css.map": "/EnglishWords/static/css/main.944dc421.css.map",
-    "main.7101b051.js.map": "/EnglishWords/static/js/main.7101b051.js.map",
+    "main.0f0001a2.js.map": "/EnglishWords/static/js/main.0f0001a2.js.map",
     "787.82e29686.chunk.js.map": "/EnglishWords/static/js/787.82e29686.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.944dc421.css",
-    "static/js/main.7101b051.js"
+    "static/js/main.0f0001a2.js"
   ]
 }
