@@ -26,12 +26,9 @@ function App() {
           <Route path="*" element={<NotFoundPade />} />
         </Routes>
         <Footer />
-        <Routes></Routes>
       </div>
     </Router>
 
   );
-
 }
-
 export default App;
