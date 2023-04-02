@@ -1,16 +1,26 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState, } from "react";
 import WordCard from "../WordCard/WordCard";
 import "./WordCardSlider.scss";
 const DEFAULT_CARD = [{ name: "noName" }];
 
 function WordCardSlider({ cards = DEFAULT_CARD, indexOfFirstCardToShow = 0 }) {
+
     if (!cards.length) {
         cards = DEFAULT_CARD;
     }
+
     const [index, setIndex] = useState(indexOfFirstCardToShow);
+    const [learnWords, setLearnWords] = useState(0);
+    const [pressed, setPressed] = useState(false);
+    const [viewCard, setViewCard] = useState(false);
+    const handleLearned = () => {
+        setLearnWords(learnWords + 1);
+    }
 
     const changeIndex = useCallback(
         (value) => {
+            setViewCard(false);
+            setPressed(false);
             if (index + value < 0) {
                 setIndex(cards.length - 1);
                 return;
@@ -19,6 +29,7 @@ function WordCardSlider({ cards = DEFAULT_CARD, indexOfFirstCardToShow = 0 }) {
                 setIndex(0);
                 return;
             }
+
             setIndex(index + value);
         },
         [cards.length, index]
@@ -28,19 +39,22 @@ function WordCardSlider({ cards = DEFAULT_CARD, indexOfFirstCardToShow = 0 }) {
     const decriaseCard = useCallback(() => changeIndex(-1), [changeIndex]);
 
     return (
-        <div className="slider">
-            <button
-                type="button"
-                className="sliderPrev slider__btn"
-                onClick={decriaseCard}
-            ></button>
-            <WordCard card={cards[index]}></WordCard>
-            <button
-                type="button"
-                className="sliderNext slider__btn"
-                onClick={increaseCard}
-            ></button>
-        </div>
+        <>
+            <div className="learnedWords"> Words learned: {learnWords}</div>
+            <div className="slider" >
+                <button
+                    type="button"
+                    className="sliderPrev slider__btn"
+                    onClick={decriaseCard}
+                ></button>
+                <WordCard pressed={pressed} setPressed={setPressed} setViewCard={setViewCard} viewCard={viewCard} onLearned={handleLearned} card={cards[index]}></WordCard>
+                <button
+                    type="button"
+                    className="sliderNext slider__btn"
+                    onClick={increaseCard}
+                ></button>
+            </div>
+        </>
     );
 }
 export default WordCardSlider;

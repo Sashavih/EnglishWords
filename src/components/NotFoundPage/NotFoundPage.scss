@@ -3,7 +3,7 @@
     overflow: hidden;
     height: 100vh;
     margin: 0;
-    font-size: 40px;
+    font-size: 36px;
     color: rgb(175, 175, 175);
     text-transform: uppercase;
 
@@ -11,14 +11,15 @@
 
 .notFoundBox__title {
     margin: auto;
-    padding: 1em 1em 0.3em 1em;
+    padding: 2em 1em 0.3em 1em;
     width: 60%;
 
 }
 
 .notFoundBox__btn {
-    padding: 0.6em;
-    border-radius: 20px;
+    padding: 0.7em;
+    margin-top: 1em;
+    border-radius: 25px;
     width: 11em;
     border: none;
     font-size: 16px;

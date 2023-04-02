@@ -17,18 +17,18 @@ import {
 function App() {
 
   return (
-    <Router>
-      <div className='App'>
-        <Header />
+    <div className='App'>
+      <Router>
         <Routes>
-          <Route path="/" element={<div className='worldListBox'>{words.map((word) => (<WordsList key={word.id} {...word} />))}</div>} />
-          <Route path="/Game" element={<WordCardSlider cards={cards} />} />
-          <Route path="*" element={<NotFoundPade />} />
+          <Route path="/" element={
+            <>
+              <Header />
+              <div className='worldListBox'>{words.map((word) => (<WordsList key={word.id} {...word} />))}</div> <Footer /></>} />
+          <Route path="/Game" element={<><Header /><WordCardSlider cards={cards} /> <Footer /></>} />
+          <Route path="*" element={<><NotFoundPade /></>} />
         </Routes>
-        <Footer />
-      </div>
-    </Router>
-
+      </Router>
+    </div>
   );
 }
 export default App;
