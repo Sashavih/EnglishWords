@@ -27,17 +27,13 @@ function WordsList({ english, transcription, russian, changeFont, deleteBtns, da
         transcription: transcription,
         translate: russian
     });
-    const [isEmpty, setIsEmpty] = useState(false);
-
 
     const handleSubmit = e => {
         e.preventDefault();
         if (form.transcription === '' || form.translate === '' || form.word === '') {
-            setIsEmpty(true);
             setPressed(pressed);
             alert('Fill the fields')
         } else {
-            setIsEmpty(false);
             console.log(form);
             handleChange();
         };
