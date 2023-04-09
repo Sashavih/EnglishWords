@@ -1,12 +1,12 @@
 import { useCallback, useState, } from "react";
 import WordCard from "../WordCard/WordCard";
 import "./WordCardSlider.scss";
-const DEFAULT_CARD = [{ name: "noName" }];
 
-function WordCardSlider({ cards = DEFAULT_CARD, indexOfFirstCardToShow = 0 }) {
+const DEFAULT_CARDS = [{ name: "noName" }];
 
+function WordCardSlider({ cards = DEFAULT_CARDS, indexOfFirstCardToShow = 0 }) {
     if (!cards.length) {
-        cards = DEFAULT_CARD;
+        cards = DEFAULT_CARDS;
     }
 
     const [index, setIndex] = useState(indexOfFirstCardToShow);
@@ -17,7 +17,7 @@ function WordCardSlider({ cards = DEFAULT_CARD, indexOfFirstCardToShow = 0 }) {
         setLearnWords(learnWords + 1);
     }
 
-    const changeIndex = useCallback(
+    /*const changeIndex = useCallback(
         (value) => {
             setViewCard(false);
             setPressed(false);
@@ -31,6 +31,14 @@ function WordCardSlider({ cards = DEFAULT_CARD, indexOfFirstCardToShow = 0 }) {
             }
 
             setIndex(index + value);
+        },
+        [cards.length, index]
+    );*/
+    const changeIndex = useCallback(
+        (value) => {
+            setViewCard(false);
+            setPressed(false);
+            setIndex((index + value + cards.length) % cards.length);
         },
         [cards.length, index]
     );
@@ -86,3 +94,7 @@ export default WordCardSlider;
 }
 
 export default WordCard;*/
+
+
+
+        //Московский государственный университет технологий и управления им.К.Г.Разумовского, Москва

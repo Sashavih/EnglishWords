@@ -13,7 +13,6 @@ function WordCard({ card, onLearned, viewCard, setViewCard, pressed, setPressed 
             setViewCard(true);
             onLearned();
         }
-
     }
     return (
 
