@@ -67,7 +67,7 @@ function WordCardSlider({ cards = DEFAULT_CARDS, indexOfFirstCardToShow = 0 }) {
 export default WordCardSlider;
 
 
-/*const changeIndex = useCallback(
+/*const  changeIndex = useCallback(
     (value) => {
         setViewCard(false);
         setPressed(false);
