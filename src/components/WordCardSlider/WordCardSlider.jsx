@@ -13,38 +13,31 @@ function WordCardSlider({ cards = DEFAULT_CARDS, indexOfFirstCardToShow = 0 }) {
     const [learnWords, setLearnWords] = useState(0);
     const [pressed, setPressed] = useState(false);
     const [viewCard, setViewCard] = useState(false);
+    const [wordThatLearn, setWordThatLearn] = useState([]);
+
     const handleLearned = () => {
         setLearnWords(learnWords + 1);
     }
 
-    /*const changeIndex = useCallback(
-        (value) => {
-            setViewCard(false);
-            setPressed(false);
-            if (index + value < 0) {
-                setIndex(cards.length - 1);
-                return;
-            }
-            if (index + value > cards.length - 1) {
-                setIndex(0);
-                return;
-            }
-
-            setIndex(index + value);
-        },
-        [cards.length, index]
-    );*/
     const changeIndex = useCallback(
         (value) => {
             setViewCard(false);
             setPressed(false);
-            setIndex((index + value + cards.length) % cards.length);
+            const i = (index + value + cards.length) % cards.length;
+            setIndex(i);
         },
         [cards.length, index]
     );
 
     const increaseCard = useCallback(() => changeIndex(1), [changeIndex]);
     const decriaseCard = useCallback(() => changeIndex(-1), [changeIndex]);
+
+    const handlePress = () => {
+        if (!wordThatLearn.includes(cards[index])) {
+            setWordThatLearn((prevCards) => [...prevCards, cards[index]]);
+            handleLearned();
+        }
+    };
 
     return (
         <>
@@ -55,7 +48,13 @@ function WordCardSlider({ cards = DEFAULT_CARDS, indexOfFirstCardToShow = 0 }) {
                     className="sliderPrev slider__btn"
                     onClick={decriaseCard}
                 ></button>
-                <WordCard pressed={pressed} setPressed={setPressed} setViewCard={setViewCard} viewCard={viewCard} onLearned={handleLearned} card={cards[index]}></WordCard>
+                <WordCard
+                    pressed={pressed}
+                    setPressed={setPressed}
+                    setViewCard={setViewCard}
+                    viewCard={viewCard}
+                    onLearned={handlePress}
+                    card={cards[index]} />
                 <button
                     type="button"
                     className="sliderNext slider__btn"
@@ -67,34 +66,21 @@ function WordCardSlider({ cards = DEFAULT_CARDS, indexOfFirstCardToShow = 0 }) {
 }
 export default WordCardSlider;
 
-/*class WordCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            pressed: false
-        };
-    }
-    handleChange = () => {
-        this.setState(
-            { pressed: !this.state.pressed }
-        )
-    };
 
-    render() {
-        return (
-            <div className="card-box">
-                <h2>Book</h2>
-                <div className="card-box__text">
-                    <p className="card-box__transcription">[' bʊk ']</p>
-                    {this.state.pressed ? <button onClick={this.handleChange} className="card-box__translate">Книга</button> : <button onClick={this.handleChange} type="button" className="card-box__btn">проверить</button>}
-                </div>
-            </div >
-        )
-    }
-}
+/*const changeIndex = useCallback(
+    (value) => {
+        setViewCard(false);
+        setPressed(false);
+        if (index + value < 0) {
+            setIndex(cards.length - 1);
+            return;
+        }
+        if (index + value > cards.length - 1) {
+            setIndex(0);
+            return;
+        }
 
-export default WordCard;*/
-
-
-
-        //Московский государственный университет технологий и управления им.К.Г.Разумовского, Москва
+        setIndex(index + value);
+    },
+    [cards.length, index]
+);*/

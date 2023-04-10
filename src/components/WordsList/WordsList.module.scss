@@ -12,13 +12,11 @@ $grayBackground: #121212;
 .table {
     display: grid;
     width: 67%;
-    height: 3.5em;
+    height: 4.1em;
     margin: auto;
     grid-template-columns: 1fr 1fr 1fr 15%;
     color: #d8d8d8;
     box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.1);
-
-
 
     div {
         align-items: center;
@@ -26,13 +24,8 @@ $grayBackground: #121212;
         border-right: 1px solid rgba(197, 197, 197, 0.178);
         padding-top: 0.5em;
         box-sizing: border-box;
-
     }
-
 }
-
-
-
 
 .blueClick {
     background-color: #947fff;
