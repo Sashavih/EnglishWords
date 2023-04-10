@@ -1,8 +1,6 @@
 ### ENGLISH WORDS
 Application for learning English
 
-<img src="https://github.com/Sashavih/EnglishWords/blob/main/src/components/WordsList/en.png" width="800"/>
-
 ### Technologies:
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
