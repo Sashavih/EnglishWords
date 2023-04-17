@@ -3,7 +3,7 @@ import styles from './WordsList.module.scss';
 import './WordsList.scss';
 import * as cn from 'classnames';
 
-function WordsList({ english, transcription, russian, changeFont, deleteBtns, darkColor, }) {
+function WordsList({ english, transcription, russian, changeFont, darkColor, }) {
 
     const boldFont = cn(
         {
@@ -58,7 +58,7 @@ function WordsList({ english, transcription, russian, changeFont, deleteBtns, da
                         className={`${styles.pink} ${boldFont} ${colorDark}`}>{transcription}</div>
                     <div
                         className={`${styles.lightGreen} ${boldFont} `}>{russian}</div>
-                    {!deleteBtns && <div className={styles.btnBox}>
+                    <div className={styles.btnBox}>
                         <button
                             onClick={handleChange}
                             type="button"
@@ -66,9 +66,7 @@ function WordsList({ english, transcription, russian, changeFont, deleteBtns, da
                         <button
                             type="button"
                             className={`${styles.pink} ${styles.btnDelete} `}></button>
-                    </div>}
-                    {deleteBtns && <div className={styles.btnBox}>
-                    </div>}
+                    </div>
                 </div >
             </> :
                 <>
@@ -95,7 +93,7 @@ function WordsList({ english, transcription, russian, changeFont, deleteBtns, da
                                 onChange={onChange}
                                 value={form.translate}
                                 name='translate' ></input></div>
-                        {!deleteBtns && <div className={styles.btnBox}>
+                        <div className={styles.btnBox}>
                             <button
                                 type="submit"
                                 onClick={handleSubmit}
@@ -104,9 +102,7 @@ function WordsList({ english, transcription, russian, changeFont, deleteBtns, da
                                 type="button"
                                 onClick={handleChange}
                                 className={`${styles.pink}  ${styles.btnClear} `}></button>
-                        </div>}
-                        {deleteBtns && <div className={styles.btnBox}>
-                        </div>}
+                        </div>
                     </form>
                 </>}
         </>
