@@ -9,7 +9,6 @@ export const CollectionWords = (props) => {
     const [updatedWord, setUpdatedWord] = useState({});
 
     useEffect(() => {
-        setIsLoading(true);
         fetch('http://itgirlschool.justmakeit.ru/api/words')
             .then((response) => response.json())
             .then((data) => {
@@ -18,9 +17,7 @@ export const CollectionWords = (props) => {
             .catch((error) => {
                 console.error('Error fetching words: ', error);
             })
-            .finally(() => {
-                setIsLoading(false);
-            });
+
     }, [dictionary]);
 
     const addWord = (newWord) => {
