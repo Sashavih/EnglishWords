@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from './WordsList.module.scss';
 import './WordsList.scss';
-import * as cn from 'classnames';
+import * as cn from 'classnames'; import { useContext } from 'react';
+import { CollectionWordsContext } from '../../context/CollectionWordsContext';
 
-function WordsList({ english, transcription, russian, changeFont, darkColor, }) {
+
+function WordsList({ english, transcription, russian, changeFont, darkColor, id, tags }) {
+    const { updateWord } = useContext(CollectionWordsContext);
 
     const boldFont = cn(
         {
@@ -23,21 +26,24 @@ function WordsList({ english, transcription, russian, changeFont, darkColor, }) 
     }
 
     const [form, setForm] = useState({
-        word: english,
+        id: id,
+        english: english,
         transcription: transcription,
-        translate: russian
+        russian: russian,
+        tags: tags
     });
+
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (form.transcription === '' || form.translate === '' || form.word === '') {
+        if (form.transcription === '' || form.russian === '' || form.english === '') {
             setPressed(pressed);
-            alert('Fill the fields')
         } else {
-            console.log(form);
+            updateWord(form);
             handleChange();
         };
     };
+
     const onChange = e => {
         setForm({
             ...form,
@@ -77,8 +83,8 @@ function WordsList({ english, transcription, russian, changeFont, darkColor, }) 
                             <input
                                 className={`input ${errorClass(form.word)}`}
                                 onChange={onChange}
-                                value={form.word}
-                                name='word'></input></div>
+                                value={form.english}
+                                name='english'></input></div>
                         <div
                             className={`${styles.pink} ${boldFont}`}>
                             <input
@@ -91,8 +97,8 @@ function WordsList({ english, transcription, russian, changeFont, darkColor, }) 
                             <input
                                 className={`input ${errorClass(form.translate)}`}
                                 onChange={onChange}
-                                value={form.translate}
-                                name='translate' ></input></div>
+                                value={form.russian}
+                                name='russian' ></input></div>
                         <div className={styles.btnBox}>
                             <button
                                 type="submit"

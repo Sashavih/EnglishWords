@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import WordCard from '../WordCard/WordCard';
+import WordsList from '../WordsList/WordsList';
 import { CollectionWordsContext } from '../../context/CollectionWordsContext';
 
 
@@ -9,11 +9,10 @@ function WordsTable() {
     } = useContext(CollectionWordsContext);
     return (
         <div className="main">
-            <h1>WORDLIST</h1>
             <div className="cards-map">
                 {isLoading && <div >Loading...</div>}
                 {!isLoading && dictionary && dictionary.map((card) =>
-                    <WordCard
+                    <WordsList
                         key={card.id}
                         id={card.id}
                         english={card.english}

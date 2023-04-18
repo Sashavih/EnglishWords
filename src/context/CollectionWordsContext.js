@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-
 export const CollectionWordsContext = createContext();
 
 export const CollectionWords = (props) => {
@@ -22,7 +21,7 @@ export const CollectionWords = (props) => {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, []);
+    }, [dictionary]);
 
     const addWord = (newWord) => {
         setIsLoading(true); // set isLoading to true before making the API call
@@ -46,23 +45,18 @@ export const CollectionWords = (props) => {
             });
     };
 
-
-    const updateWord = (updatedWord) => {
+    const updateWord = (q) => {
         setIsLoading(true);
-        fetch(`http://itgirlschool.justmakeit.ru/api/words/${updatedWord.id}/update`, {
-            method: 'PUT',
+        fetch(`http://itgirlschool.justmakeit.ru/api/words/${q.id}/update`, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(updatedWord),
+            body: JSON.stringify(q),
         })
             .then((response) => response.json())
             .then((data) => {
-                setDictionary((prevDictionary) =>
-                    prevDictionary.map((word) =>
-                        word.id === updatedWord.id ? data : word
-                    )
-                );
+                console.log(data);
             })
             .catch((error) => {
                 console.error('Error updating word: ', error);
@@ -71,13 +65,16 @@ export const CollectionWords = (props) => {
             .finally(() => {
                 setIsLoading(false);
             });
-
     };
+
     const deleteWord = (id) => {
         setIsLoading(true);
-        fetch(`http://itgirlschool.justmakeit.ru/api/words/${updatedWord.id}/delete`, {
-            method: 'DELETE',
-        })
+        fetch(
+            `http://itgirlschool.justmakeit.ru/api/words/${updatedWord.id}/delete`,
+            {
+                method: 'DELETE',
+            }
+        )
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to delete word');
@@ -108,8 +105,7 @@ export const CollectionWords = (props) => {
                 deleteWord,
             }}
         >
-            {isLoading ? "Loading..." : props.children}{' '}
-
+            {props.children}
         </CollectionWordsContext.Provider>
     );
 };
