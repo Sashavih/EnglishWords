@@ -6,7 +6,7 @@ import { CollectionWordsContext } from '../../context/CollectionWordsContext';
 
 
 function WordsList({ english, transcription, russian, changeFont, darkColor, id, tags }) {
-    const { updateWord } = useContext(CollectionWordsContext);
+    const { updateWord, deleteWord } = useContext(CollectionWordsContext);
 
     const boldFont = cn(
         {
@@ -43,6 +43,10 @@ function WordsList({ english, transcription, russian, changeFont, darkColor, id,
             handleChange();
         };
     };
+    const deleteWords = e => {
+        e.preventDefault();
+        deleteWord(form.id);
+    }
 
     const onChange = e => {
         setForm({
@@ -56,6 +60,7 @@ function WordsList({ english, transcription, russian, changeFont, darkColor, id,
     };
     return (
         <>
+
             {!pressed ? <>
                 <div className={styles.table}>
                     <div
@@ -70,6 +75,7 @@ function WordsList({ english, transcription, russian, changeFont, darkColor, id,
                             type="button"
                             className={`${styles.sun}  ${styles.btnEdit}`}></button>
                         <button
+                            onClick={deleteWords}
                             type="button"
                             className={`${styles.pink} ${styles.btnDelete} `}></button>
                     </div>
@@ -81,7 +87,7 @@ function WordsList({ english, transcription, russian, changeFont, darkColor, id,
                         <div
                             className={`${styles.purple} ${boldFont}`}>
                             <input
-                                className={`input ${errorClass(form.word)}`}
+                                className={`input ${errorClass(form.english)}`}
                                 onChange={onChange}
                                 value={form.english}
                                 name='english'></input></div>
@@ -95,7 +101,7 @@ function WordsList({ english, transcription, russian, changeFont, darkColor, id,
                         <div
                             className={`${styles.lightGreen} ${boldFont}`}>
                             <input
-                                className={`input ${errorClass(form.translate)}`}
+                                className={`input ${errorClass(form.russian)}`}
                                 onChange={onChange}
                                 value={form.russian}
                                 name='russian' ></input></div>

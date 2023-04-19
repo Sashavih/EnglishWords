@@ -17,11 +17,13 @@ export const CollectionWords = (props) => {
             .catch((error) => {
                 console.error('Error fetching words: ', error);
             })
-
+            .finally(() => {
+                setIsLoading(false);
+            });
     }, [dictionary]);
 
     const addWord = (newWord) => {
-        setIsLoading(true); // set isLoading to true before making the API call
+        setIsLoading(true);
         fetch('http://itgirlschool.justmakeit.ru/api/words/add', {
             method: 'POST',
             headers: {
@@ -38,7 +40,7 @@ export const CollectionWords = (props) => {
                 setError(error);
             })
             .finally(() => {
-                setIsLoading(false); // set isLoading to false after the API call is complete
+                setIsLoading(false);
             });
     };
 

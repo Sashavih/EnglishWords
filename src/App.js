@@ -1,5 +1,5 @@
 import './App.css';
-import WordsTable from './components/WordsTable//WordsTable';
+import WordTable from './components/WordsTable//WordsTable';
 import cards from './utils/cards';
 import Header from './components/Header/Header';
 import WordCardSlider from './components/WordCardSlider/WordCardSlider';
@@ -19,7 +19,7 @@ function App() {
               element={
                 <>
                   <Header />
-                  <WordsTable />
+                  <WordTable />
                   <Footer />
                 </>
               }

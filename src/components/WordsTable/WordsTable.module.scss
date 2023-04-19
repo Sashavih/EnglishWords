@@ -1,0 +1,35 @@
+$purple: #8e67abce;
+$pink: #af2896d5;
+$lightGreen: #2b9476dd;
+$blackBackground: #070707;
+$grayBackground: #121212;
+
+.table {
+    display: grid;
+    width: 67%;
+    height: 4.1em;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr 15%;
+    color: #d8d8d8;
+
+    div {
+        align-items: center;
+        padding-top: 0.5em;
+        box-sizing: border-box;
+        font-weight: 700;
+
+    }
+}
+
+
+.purple {
+    background-color: $purple;
+}
+
+.pink {
+    background-color: $pink;
+}
+
+.lightGreen {
+    background-color: $lightGreen;
+}
