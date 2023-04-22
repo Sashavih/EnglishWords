@@ -21,7 +21,6 @@ $grayBackground: #121212;
     }
 }
 
-
 .purple {
     background-color: $purple;
 }
@@ -32,4 +31,16 @@ $grayBackground: #121212;
 
 .lightGreen {
     background-color: $lightGreen;
+}
+
+@media screen and (max-width: 810px) {
+    .table {
+        width: 87%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .table {
+        width: 100%;
+    }
 }

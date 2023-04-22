@@ -50,44 +50,44 @@ $grayBackground: #121212;
     justify-content: center;
     box-sizing: border-box;
     background-color: $purple;
+}
 
-    .btnSave {
-        background: url('../../static/check.png')0 0 /100% no-repeat;
-        width: 36px;
-        height: 28px;
-    }
+.btnSave {
+    background: url('../../static/check.png')0 0 /100% no-repeat;
+    width: 36px;
+    height: 28px;
+}
 
-    .btnEdit {
-        width: 28px;
-        height: 28px;
-        background: url('../../static/pencil.png')0 0 /100% no-repeat;
-    }
+.btnEdit {
+    width: 28px;
+    height: 28px;
+    background: url('../../static/pencil.png')0 0 /100% no-repeat;
+}
 
-    .btnDelete {
-        width: 28px;
-        height: 28px;
-        background: url('../../static/delete.png')0 0 /100% no-repeat;
+.btnDelete {
+    width: 28px;
+    height: 28px;
+    background: url('../../static/delete.png')0 0 /100% no-repeat;
 
-    }
+}
 
-    .btnClear {
-        width: 28px;
-        height: 28px;
-        background: url('../../static/Component3.png')0 0 /100% no-repeat;
-    }
+.btnClear {
+    width: 28px;
+    height: 28px;
+    background: url('../../static/Component3.png')0 0 /100% no-repeat;
+}
 
 
-    button {
-        border-radius: 8%;
-        border: none;
-        margin: 7px;
-        transition: 0.3s;
-        box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
+button {
+    border-radius: 8%;
+    border: none;
+    margin: 7px;
+    transition: 0.3s;
+    box-shadow: -1px 5px 5px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
-        &:hover {
-            transform: scale(1.09);
-        }
+    &:hover {
+        transform: scale(1.09);
     }
 }
 
@@ -116,9 +116,6 @@ $grayBackground: #121212;
     background-color: $orange;
 }
 
-.sun {
-    background-color: $sun;
-}
 
 
 .boldFont {
@@ -127,4 +124,37 @@ $grayBackground: #121212;
 
 .darkColor {
     opacity: 92%;
+}
+
+@media screen and (max-width: 810px) {
+    .table {
+        width: 87%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .table {
+        width: 100%;
+    }
+
+    .btnDelete {
+
+        height: 19px;
+    }
+
+    .btnEdit {
+
+        height: 19px;
+    }
+
+    .btnSave {
+
+        height: 19px;
+        background-size: cover;
+    }
+
+    .btnClear {
+
+        height: 19px;
+    }
 }
