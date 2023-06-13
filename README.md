@@ -1,6 +1,13 @@
 ### ENGLISH WORDS
 Application for learning English
 
+### Getting started
+In the project directory, you can run:
+
+npm install
+
+npm run start
+
 ### Technologies:
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
